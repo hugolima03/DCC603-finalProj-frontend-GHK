@@ -1,7 +1,10 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+
 import StyledComponentsRegistry from "./registry";
 
-const inter = Inter({ subsets: ["latin"] });
+import { GlobalStyle } from "@/styles/global";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "SG Cursos",
@@ -15,8 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className={poppins.className}>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
