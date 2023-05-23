@@ -11,6 +11,8 @@ export const Container = styled(Link)`
   width: fit-content;
   gap: 1.6rem;
 
+  margin-bottom: 3.2rem;
+
   img {
     object-fit: cover;
   }
@@ -28,7 +30,7 @@ export const Column = styled.div`
 
 export const Title = styled.strong`
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 `
 export const Text = styled.p`
   font-size: 1.4rem;

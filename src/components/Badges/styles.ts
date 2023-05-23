@@ -11,6 +11,7 @@ export const Container = styled.div`
   overflow: auto;
 
   padding: 2.4rem;
+  border-left: 0.1rem solid #EBEBF0;
 `
 
 export const Title = styled.strong`

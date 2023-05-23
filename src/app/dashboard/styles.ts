@@ -12,9 +12,13 @@ export const Container = styled.div`
   gap :2.4rem;
   height: -webkit-fill-available;
   overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Title = styled.h1`
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 600;
 `

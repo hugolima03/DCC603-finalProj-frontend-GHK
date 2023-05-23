@@ -1,10 +1,13 @@
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 import StyledComponentsRegistry from "./registry";
 
 import { GlobalStyle } from "@/styles/global";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Raleway({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "SG Cursos",

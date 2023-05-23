@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const SidebarContainer = styled.aside`
   display: flex;
@@ -21,18 +21,28 @@ export const Logo = styled(Image)`
   transform: translateX(-50%);
 `
 
-export const SidebarLink = styled(Link)`
-  display: flex;
-  padding: 1.6rem 2.4rem;
+type SidebarLinkProps = {
+  active: boolean
+}
 
-  gap: 1.2rem;
+export const SidebarLink = styled(Link) <SidebarLinkProps>`
+  ${({ active }) => css`
+    display: flex;
+    padding: 1.6rem 2.4rem;
 
-  transition: all 0.2s;
-  font-size: 1.6rem;
-  text-decoration: none;
+    gap: 1.2rem;
 
-  &:hover {
-    background-color: #f1f5f9;
-    border-left: 0.1rem solid #0F172A;
-  }
+    transition: all 0.2s;
+    font-size: 1.6rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #f1f5f9;
+      border-left: 0.1rem solid #0F172A;
+    }
+
+    ${!active ? css`
+      color: #8C8D9C;
+    ` : null}
+  `}
 `

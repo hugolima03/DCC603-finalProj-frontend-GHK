@@ -7,7 +7,7 @@ export const Container = styled(Link)`
   display: flex;
   flex-direction: row;
 
-  border: 0.1rem solid #f3f4f6;
+  border: 0.1rem solid #EBEBF0;
   text-decoration: none;
 
   &:hover {
@@ -35,8 +35,9 @@ export const CourseImage = styled(Image)`
 `
 
 export const Subtitle = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 300;
+  color: #ABABAB;
 `
 
 export const Strong = styled.strong`
