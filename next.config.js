@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "blog.logrocket.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.holopin.io",
+      },
     ],
   },
 };

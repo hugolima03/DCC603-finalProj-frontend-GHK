@@ -1,7 +1,9 @@
 import React from "react";
 
-import * as S from "./style";
 import Sidebar from "@/components/Sidebar";
+import Badges from "@/components/Badges";
+
+import * as S from "./style";
 
 type BaseProps = {
   children: React.ReactNode;
@@ -12,7 +14,7 @@ const Base = ({ children }: BaseProps) => {
     <S.Container>
       <Sidebar />
       <S.Main>{children}</S.Main>
-      <div>Badges</div>
+      <Badges />
     </S.Container>
   );
 };
