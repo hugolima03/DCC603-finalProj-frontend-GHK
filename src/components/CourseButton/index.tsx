@@ -21,9 +21,13 @@ const CourseButton = ({
 }: CourseButtonProps) => {
   return (
     <S.Container href={`/courses/${slug}`}>
-      <S.CourseImage src={coursePhoto} alt={title} width={324} height={215} />
+      <S.CouseImageContainer>
+        <S.CourseImage src={coursePhoto} alt={title} width={324} height={215} />
+      </S.CouseImageContainer>
       <S.Content>
-        <S.Subtitle>{`${courseCategory} • ${dayjs(end_date).format('DD/MM/YYYY')}`}</S.Subtitle>
+        <S.Subtitle>{`${courseCategory} • ${dayjs(end_date).format(
+          "DD/MM/YYYY"
+        )}`}</S.Subtitle>
         <S.Strong>{title}</S.Strong>
       </S.Content>
     </S.Container>
