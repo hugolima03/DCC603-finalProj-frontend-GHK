@@ -1,7 +1,15 @@
 import React from "react";
 
+import ProfileButton from "@/components/ProfileButton";
+
+import * as S from "./styles";
+
 const Page = () => {
-  return <div style={{ width: "100%" }}>Content</div>;
+  return (
+    <S.Container>
+      <ProfileButton />
+    </S.Container>
+  );
 };
 
 export default Page;

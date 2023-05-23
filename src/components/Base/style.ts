@@ -10,3 +10,5 @@ export const Container = styled.div`
 
   grid-template-columns: 20rem auto 35rem;
 `
+
+export const Main = styled.main``
