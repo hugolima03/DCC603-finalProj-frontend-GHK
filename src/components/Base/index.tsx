@@ -12,9 +12,7 @@ const Base = ({ children }: BaseProps) => {
     <S.Container>
       <Sidebar />
       <S.Main>{children}</S.Main>
-      <div style={{ width: "100%", borderLeft: "0.1rem solid #f3f4f6" }}>
-        Badges
-      </div>
+      <div>Badges</div>
     </S.Container>
   );
 };
