@@ -22,19 +22,7 @@ const Badges = () => {
         />
         <S.Badge
           alt=""
-          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGZjZGJkczExNjQ5NzBmbW9lcDVzbWFuNiIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbH19&w=3840&q=75"
-          width={100}
-          height={100}
-        />
-        <S.Badge
-          alt=""
           src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhlcTN6OWMwMzU3MDlsM2Z4OTluOHg2IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0%3D&w=3840&q=75"
-          width={100}
-          height={100}
-        />
-        <S.Badge
-          alt=""
-          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGY4M3p5bHUwNTYxMGZqbWJlcWpyZTFsIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0%3D&w=3840&q=75"
           width={100}
           height={100}
         />
@@ -58,7 +46,19 @@ const Badges = () => {
         />
         <S.Badge
           alt=""
-          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGhwNWx6eHoxODk0MjBma3hwb3YwZmxvMyIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbH19&w=3840&q=75"
+          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGgwYjY3amwxNjE3MzBmbDlnb3A1eHl4YSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbH19&w=3840&q=75"
+          width={100}
+          height={100}
+        />
+        <S.Badge
+          alt=""
+          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGZjMDFlc2UyMjg3MGZsOTJ4cWNoNGNxIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0%3D&w=3840&q=75"
+          width={100}
+          height={100}
+        />
+        <S.Badge
+          alt=""
+          src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGVoMWQzdHIyMzQ1MjA4ams2aXZkcXp4bCIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbH19&w=3840&q=75"
           width={100}
           height={100}
         />

@@ -8,6 +8,7 @@ export const Container = styled(Link)`
   flex-direction: row;
 
   border: 0.1rem solid #EBEBF0;
+  background-color: white;
   text-decoration: none;
 
   &:hover {
@@ -20,9 +21,6 @@ export const Container = styled(Link)`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-
-  max-width: 30rem;
-
   padding: 3.2rem 4.2rem;
 `
 
@@ -32,6 +30,7 @@ export const CouseImageContainer = styled.div`
 
 export const CourseImage = styled(Image)`
   transition: all 0.2s;
+  object-fit: cover;
 `
 
 export const Subtitle = styled.p`
@@ -45,4 +44,5 @@ export const Strong = styled.strong`
   font-weight: 500;
 
   margin-top: auto;
+  max-width: 30rem;
 `

@@ -9,7 +9,7 @@ type CourseButtonProps = {
   title: string;
   coursePhoto: string;
   courseCategory: string;
-  end_date: string;
+  end_date: string | Date;
 };
 
 const CourseButton = ({
