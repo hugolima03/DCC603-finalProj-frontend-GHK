@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 
@@ -12,13 +11,6 @@ export const SidebarContainer = styled.aside`
   background-color: #f8fafc;
 
   position: relative;
-`
-
-export const Logo = styled(Image)`
-  position: absolute;
-  top: 2.4rem;
-  left: 50%;
-  transform: translateX(-50%);
 `
 
 type SidebarLinkProps = {

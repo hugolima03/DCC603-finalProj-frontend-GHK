@@ -1,7 +1,7 @@
 import React from "react";
 
-import ProfileButton from "@/components/ProfileButton";
-import CourseButton from "@/components/CourseButton";
+import ProfileButton from "components/ProfileButton";
+import CourseButton from "components/CourseButton";
 
 import * as S from "./styles";
 

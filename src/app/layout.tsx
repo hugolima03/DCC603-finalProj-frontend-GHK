@@ -2,7 +2,7 @@ import { Raleway } from "next/font/google";
 
 import StyledComponentsRegistry from "./registry";
 
-import { GlobalStyle } from "@/styles/global";
+import { GlobalStyle } from "styles/global";
 
 const inter = Raleway({
   subsets: ["latin"],

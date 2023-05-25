@@ -1,31 +1,34 @@
-"use client";
-import React from "react";
-import { usePathname } from "next/navigation";
+'use client'
+import React from 'react'
+import { usePathname } from 'next/navigation'
 
-import { Book, Megaphone, MortarBoard } from "@styled-icons/octicons";
+import { Book, Megaphone, MortarBoard } from '@styled-icons/octicons'
 
-import * as S from "./styles";
+import Logo from 'components/Logo'
+import * as S from './styles'
 
 const Sidebar = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <S.SidebarContainer>
-      <S.Logo alt="SG Cursos" src="/logo.png" width={150} height={58} />
-      <S.SidebarLink href="/dashboard" active={pathname.includes("/dashboard")}>
+      <Logo
+        style={{ top: '2.4rem', left: '50%', transform: 'translateX(-50%)' }}
+      />
+      <S.SidebarLink href="/dashboard" active={pathname.includes('/dashboard')}>
         <Book size={16} />
         Dashboard
       </S.SidebarLink>
-      <S.SidebarLink href="/students" active={pathname.includes("/students")}>
+      <S.SidebarLink href="/students" active={pathname.includes('/students')}>
         <MortarBoard size={16} />
         Estudantes
       </S.SidebarLink>
-      <S.SidebarLink href="/support" active={pathname.includes("/support")}>
+      <S.SidebarLink href="/support" active={pathname.includes('/support')}>
         <Megaphone size={16} />
         Suporte
       </S.SidebarLink>
     </S.SidebarContainer>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

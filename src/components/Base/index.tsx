@@ -1,7 +1,7 @@
 import React from "react";
 
-import Sidebar from "@/components/Sidebar";
-import Badges from "@/components/Badges";
+import Sidebar from "components/Sidebar";
+import Badges from "components/Badges";
 
 import * as S from "./style";
 
