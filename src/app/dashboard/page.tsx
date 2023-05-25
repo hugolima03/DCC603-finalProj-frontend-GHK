@@ -14,6 +14,14 @@ const Page = () => {
     {
       slug: 'java',
       courseCategory: 'Programação',
+      title: 'A complete guide to using IndexedDB',
+      coursePhoto:
+        'https://blog.logrocket.com/wp-content/uploads/2023/05/complete-guide-using-indexeddb-nocdn.png',
+      end_date: '2021-09-27 15:22:53.679985+02'
+    },
+    {
+      slug: 'java',
+      courseCategory: 'Programação',
       title: 'Programação Orientada a Objetos com Java',
       coursePhoto:
         'https://blog.logrocket.com/wp-content/uploads/2019/01/1_-y966xjyDL3Lxu_8hvu7nA.png?w=1024',

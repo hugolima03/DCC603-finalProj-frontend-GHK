@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
 
-import Sidebar from 'components/Sidebar'
 import Badges from 'components/Badges'
+import Sidebar from 'components/Sidebar'
+import CourseDetails from 'components/CourseDetails'
 
 import * as S from './style'
 import { useGlobal } from 'contexts/global'
@@ -18,7 +19,7 @@ const Base = ({ children }: BaseProps) => {
     <S.Container hasActiveCourse={!!activeCourse}>
       <Sidebar small={!!activeCourse} />
       <S.Main>{children}</S.Main>
-      <Badges />
+      {activeCourse ? <CourseDetails /> : <Badges />}
     </S.Container>
   )
 }

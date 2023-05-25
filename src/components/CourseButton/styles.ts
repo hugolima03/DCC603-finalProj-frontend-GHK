@@ -15,6 +15,7 @@ export const Container = styled.button<ContainerProps>`
     background-color: white;
     text-decoration: none;
     cursor: pointer;
+    padding: 0;
 
     ${small
       ? css`

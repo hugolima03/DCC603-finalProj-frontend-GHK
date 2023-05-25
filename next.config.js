@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.holopin.io",
       },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+      },
     ],
   },
 };
