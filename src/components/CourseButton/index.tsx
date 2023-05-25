@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react'
 
-import dayjs from "dayjs";
+import dayjs from 'dayjs'
 
-import * as S from "./styles";
+import * as S from './styles'
 
 type CourseButtonProps = {
-  slug: string;
-  title: string;
-  coursePhoto: string;
-  courseCategory: string;
-  end_date: string | Date;
-};
+  slug: string
+  title: string
+  coursePhoto: string
+  courseCategory: string
+  end_date: string | Date
+  small?: boolean
+}
 
 const CourseButton = ({
   slug,
@@ -18,20 +19,25 @@ const CourseButton = ({
   coursePhoto,
   end_date,
   courseCategory,
+  small = false
 }: CourseButtonProps) => {
+  const imgProps = small
+    ? { width: 125, height: 125 }
+    : { width: 324, height: 215 }
+
   return (
-    <S.Container href={`/courses/${slug}`}>
+    <S.Container href={`/courses/${slug}`} small={small}>
       <S.CouseImageContainer>
-        <S.CourseImage src={coursePhoto} alt={title} width={324} height={215} />
+        <S.CourseImage src={coursePhoto} alt={title} {...imgProps} />
       </S.CouseImageContainer>
       <S.Content>
         <S.Subtitle>{`${courseCategory} • ${dayjs(end_date).format(
-          "DD/MM/YYYY"
+          'DD/MM/YYYY'
         )}`}</S.Subtitle>
         <S.Strong>{title}</S.Strong>
       </S.Content>
     </S.Container>
-  );
-};
+  )
+}
 
-export default CourseButton;
+export default CourseButton
