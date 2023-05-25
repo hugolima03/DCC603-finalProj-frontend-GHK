@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
 import styled, { css } from 'styled-components'
 
@@ -7,7 +6,7 @@ type ContainerProps = {
   small: boolean
 }
 
-export const Container = styled(Link)<ContainerProps>`
+export const Container = styled.button<ContainerProps>`
   ${({ small }) => css`
     display: flex;
     flex-direction: row;
@@ -15,9 +14,11 @@ export const Container = styled(Link)<ContainerProps>`
     border: 0.1rem solid #ebebf0;
     background-color: white;
     text-decoration: none;
+    cursor: pointer;
 
     ${small
       ? css`
+          border: none;
           ${Content} {
             padding: 1.6rem;
             justify-content: center;
@@ -33,7 +34,7 @@ export const Container = styled(Link)<ContainerProps>`
             margin: 0;
           }
 
-          ${CourseImage} {
+          ${CourseImage}, ${CouseImageContainer} {
             border-radius: 0.8rem;
           }
         `
@@ -51,8 +52,14 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3.2rem 4.2rem;
+  align-self: stretch;
 
   transition: all 0.2s;
+
+  * {
+    align-self: flex-start;
+    text-align: start;
+  }
 `
 
 export const CouseImageContainer = styled.div`

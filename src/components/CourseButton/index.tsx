@@ -14,7 +14,6 @@ type CourseButtonProps = {
 }
 
 const CourseButton = ({
-  slug,
   title,
   coursePhoto,
   end_date,
@@ -26,7 +25,7 @@ const CourseButton = ({
     : { width: 324, height: 215 }
 
   return (
-    <S.Container href={`/courses/${slug}`} small={small}>
+    <S.Container small={small}>
       <S.CouseImageContainer>
         <S.CourseImage src={coursePhoto} alt={title} {...imgProps} />
       </S.CouseImageContainer>
