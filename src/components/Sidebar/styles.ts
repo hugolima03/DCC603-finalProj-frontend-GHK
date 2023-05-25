@@ -13,12 +13,8 @@ export const SidebarContainer = styled.aside`
   position: relative;
 `
 
-type SidebarLinkProps = {
-  active: boolean
-}
-
-export const SidebarLink = styled(Link) <SidebarLinkProps>`
-  ${({ active }) => css`
+export const SidebarLink = styled(Link)`
+  ${() => css`
     display: flex;
     padding: 1.6rem 2.4rem;
 
@@ -32,9 +28,5 @@ export const SidebarLink = styled(Link) <SidebarLinkProps>`
       background-color: #f1f5f9;
       border-left: 0.1rem solid #0F172A;
     }
-
-    ${!active ? css`
-      color: #8C8D9C;
-    ` : null}
   `}
 `
