@@ -3,30 +3,62 @@
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 
-export const SidebarContainer = styled.aside`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+type SidebarContainerProps = {
+  small: boolean
+}
 
-  background-color: #f8fafc;
+export const SidebarContainer = styled.aside<SidebarContainerProps>`
+  ${({ small }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 
-  position: relative;
+    background-color: #f8fafc;
+
+    position: relative;
+
+    height: 100vh;
+    width: 20rem;
+
+    transition: all 0.2s;
+
+    ${small
+      ? css`
+          width: 5rem;
+
+          ${SidebarLink} {
+            padding: 1.6rem;
+          }
+        `
+      : ''}
+  `}
 `
 
 export const SidebarLink = styled(Link)`
   ${() => css`
     display: flex;
-    padding: 1.6rem 2.4rem;
+    padding: 1.6rem;
+    width: 20rem;
 
-    gap: 1.2rem;
+    gap: 1.8rem;
 
     transition: all 0.2s;
     font-size: 1.6rem;
     text-decoration: none;
 
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    p {
+      transition: all 0.2s;
+    }
+
     &:hover {
       background-color: #f1f5f9;
-      border-left: 0.1rem solid #0F172A;
+      border-left: 0.1rem solid #0f172a;
     }
   `}
 `
