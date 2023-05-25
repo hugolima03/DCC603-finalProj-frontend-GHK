@@ -1,8 +1,10 @@
+'use client'
 import React from 'react'
 
 import dayjs from 'dayjs'
 
 import * as S from './styles'
+import { useGlobal } from 'contexts/global'
 
 type CourseButtonProps = {
   slug: string
@@ -14,18 +16,21 @@ type CourseButtonProps = {
 }
 
 const CourseButton = ({
+  slug,
   title,
   coursePhoto,
   end_date,
   courseCategory,
   small = false
 }: CourseButtonProps) => {
+  const { setActiveCourse } = useGlobal()
+
   const imgProps = small
     ? { width: 125, height: 125 }
     : { width: 324, height: 215 }
 
   return (
-    <S.Container small={small}>
+    <S.Container small={small} onClick={() => setActiveCourse(slug)}>
       <S.CouseImageContainer>
         <S.CourseImage src={coursePhoto} alt={title} {...imgProps} />
       </S.CouseImageContainer>

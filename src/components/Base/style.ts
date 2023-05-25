@@ -1,12 +1,22 @@
 'use client'
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
-  display: grid;
+type ContainerProps = {
+  hasActiveCourse: boolean
+}
 
-  height: 100vh;
-  grid-template-columns: 20rem auto 30rem;
+export const Container = styled.div<ContainerProps>`
+  ${({ hasActiveCourse }) => css`
+    display: grid;
+
+    height: 100vh;
+    grid-template-columns: 20rem auto 30rem;
+
+    ${hasActiveCourse && css`
+      grid-template-columns: 5rem 3fr 3fr;
+    `}
+  `}
 `
 
 export const Main = styled.main`

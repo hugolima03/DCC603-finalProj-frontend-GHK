@@ -7,10 +7,10 @@ import Logo from 'components/Logo'
 import * as S from './styles'
 
 export type SidebarProps = {
-  small: boolean
+  small?: boolean
 }
 
-const Sidebar = ({ small }: SidebarProps) => {
+const Sidebar = ({ small = false }: SidebarProps) => {
   return (
     <S.SidebarContainer small={small}>
       {small ? null : (
