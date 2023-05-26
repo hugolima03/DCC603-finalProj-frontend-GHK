@@ -33,7 +33,24 @@ export const Text = styled.p`
   text-indent: 5rem;
 `
 
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  margin: 2.4rem 0;
+`
+
 export const H3 = styled.h3`
   font-size: 1.8rem;
   font-weight: 700;
+`
+
+export const Counter = styled.p`
+  font-size: 1.2rem;
+  color:#ababab;
+`
+
+export const TasksList = styled.div`
+  display: flex;
+  flex-direction: column;
 `

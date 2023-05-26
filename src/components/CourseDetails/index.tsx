@@ -1,6 +1,7 @@
 'use client'
 import { useGlobal } from 'contexts/global'
 import * as S from './styles'
+import Task from 'components/Task'
 
 const CourseDetails = () => {
   const { setActiveCourse } = useGlobal()
@@ -27,9 +28,16 @@ const CourseDetails = () => {
         with SQL to build robust applications easily.
       </S.Text>
 
-      <S.H3>
-        Conteúdo do curso
-      </S.H3>
+      <S.Row>
+        <S.H3>Conteúdo do curso</S.H3>
+        <S.Counter>23 Tarefas • 12 horas</S.Counter>
+      </S.Row>
+
+      <S.TasksList>
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+      </S.TasksList>
     </S.Container>
   )
 }

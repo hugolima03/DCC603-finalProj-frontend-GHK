@@ -8,19 +8,21 @@ import { useGlobal } from 'contexts/global'
 
 type CourseButtonProps = {
   slug: string
-  title: string
-  coursePhoto: string
-  courseCategory: string
-  end_date: string | Date
+  course_name: string
+  course_photo: string
+  course_workload: number
+  start_date: string
+  end_date: string
+  teacher: string
+  course_category: string
   small?: boolean
 }
 
 const CourseButton = ({
   slug,
-  title,
-  coursePhoto,
-  end_date,
-  courseCategory,
+  course_category,
+  course_name,
+  course_photo,
   small = false
 }: CourseButtonProps) => {
   const { setActiveCourse } = useGlobal()
@@ -32,13 +34,13 @@ const CourseButton = ({
   return (
     <S.Container small={small} onClick={() => setActiveCourse(slug)}>
       <S.CouseImageContainer>
-        <S.CourseImage src={coursePhoto} alt={title} {...imgProps} />
+        <S.CourseImage src={course_photo} alt={course_name} {...imgProps} />
       </S.CouseImageContainer>
       <S.Content>
-        <S.Subtitle>{`${courseCategory} • ${dayjs(end_date).format(
+        <S.Subtitle>{`${course_category} • ${dayjs().format(
           'DD/MM/YYYY'
         )}`}</S.Subtitle>
-        <S.Strong>{title}</S.Strong>
+        <S.Strong>{course_name}</S.Strong>
       </S.Content>
     </S.Container>
   )
