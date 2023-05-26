@@ -15,6 +15,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Senha', type: 'password' }
       },
       async authorize(credentials) {
+        console.log('sign in...')
         const { username, password } = credentials as Credentials
 
         try {
