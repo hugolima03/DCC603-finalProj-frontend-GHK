@@ -4,6 +4,7 @@ import StyledComponentsRegistry from './registry'
 
 import { GlobalStyle } from 'styles/global'
 import { GlobalProvider } from 'contexts/global'
+import { NextAuthProvider } from "./providers";
 
 const inter = Raleway({
   subsets: ['latin'],
@@ -23,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
-          <GlobalProvider>{children}</GlobalProvider>
-        </StyledComponentsRegistry>
+        <NextAuthProvider>
+          <StyledComponentsRegistry>
+            <GlobalStyle />
+            <GlobalProvider>{children}</GlobalProvider>
+          </StyledComponentsRegistry>
+        </NextAuthProvider>
       </body>
     </html>
   )

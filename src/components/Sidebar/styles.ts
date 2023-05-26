@@ -47,6 +47,10 @@ export const SidebarLink = styled(Link)`
     font-size: 1.6rem;
     text-decoration: none;
 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
     svg {
       width: 1.6rem;
       height: 1.6rem;

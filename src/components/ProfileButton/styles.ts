@@ -1,9 +1,8 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export const Container = styled(Link)`
+export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,6 +19,7 @@ export const Container = styled(Link)`
 
 export const Profile = styled(Image)`
   border-radius: 50%;
+  background-color: #e3f2fd;
 `
 
 export const Column = styled.div`

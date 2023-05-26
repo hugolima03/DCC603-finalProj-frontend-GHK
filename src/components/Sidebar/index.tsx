@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
 
-import { Book, Megaphone, MortarBoard } from '@styled-icons/octicons'
+import { signOut } from 'next-auth/react'
+import { Book, Megaphone, MortarBoard, SignOut } from '@styled-icons/octicons'
 
 import Logo from 'components/Logo'
 import * as S from './styles'
@@ -29,6 +30,10 @@ const Sidebar = ({ small = false }: SidebarProps) => {
       <S.SidebarLink href="/support">
         <Megaphone size={16} />
         <p>Suporte</p>
+      </S.SidebarLink>
+      <S.SidebarLink as="button" onClick={() => signOut()} href="/support">
+        <SignOut size={16} />
+        <p>Sair</p>
       </S.SidebarLink>
     </S.SidebarContainer>
   )

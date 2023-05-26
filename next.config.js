@@ -30,6 +30,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "instagram.fbvb2-1.fna.fbcdn.net",
       },
+      {
+        protocol: "https",
+        hostname: "lh6.googleusercontent.com",
+      },
     ],
   },
 };
