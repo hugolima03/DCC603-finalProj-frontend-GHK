@@ -14,6 +14,22 @@ const nextConfig = {
         protocol: "https",
         hostname: "source.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "dcc-ufrr.app",
+      },
+      {
+        protocol: "https",
+        hostname: "lh4.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "instagram.fbvb2-1.fna.fbcdn.net",
+      },
     ],
   },
 };

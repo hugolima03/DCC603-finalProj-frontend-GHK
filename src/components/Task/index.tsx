@@ -2,15 +2,16 @@ import { ChangeEvent } from 'react'
 
 import { Beaker, File, Globe } from '@styled-icons/octicons'
 
+import { TypeTask } from 'components/CourseDetails'
+
 import * as S from './styles'
 
 type TaskProps = {
-  type: 'globe' | 'file' | 'beaker'
   // eslint-disable-next-line no-unused-vars
   onChange?: (e: boolean) => void
-}
+} & TypeTask
 
-const Task = ({ type = 'globe', onChange }: TaskProps) => {
+const Task = ({ type = 'globe', onChange, title, done }: TaskProps) => {
   function onInputChange(e: ChangeEvent<HTMLInputElement>) {
     if (onChange) onChange(e.target.checked)
   }
@@ -25,9 +26,9 @@ const Task = ({ type = 'globe', onChange }: TaskProps) => {
     <S.Container>
       <S.Row>
         <S.IconWrapper type={type}>{icons[type]}</S.IconWrapper>
-        <S.Text>Task!</S.Text>
+        <S.Text>{title}</S.Text>
       </S.Row>
-      <input type="checkbox" onChange={onInputChange} />
+      <input type="checkbox" onChange={onInputChange} defaultChecked={done}/>
     </S.Container>
   )
 }

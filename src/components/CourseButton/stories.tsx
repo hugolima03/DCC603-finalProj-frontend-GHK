@@ -16,7 +16,7 @@ export const Primary: Story = {
   args: {
     id: '1',
     slug: 'a-complete-guide-to-using-indexeddb',
-    course_name: 'A complete guide to using IndexedDB',
+    course_name: 'Um guia completo para usar o IndexedDB',
     course_photo:
       'https://blog.logrocket.com/wp-content/uploads/2023/05/complete-guide-using-indexeddb-nocdn.png',
     course_workload: 60,

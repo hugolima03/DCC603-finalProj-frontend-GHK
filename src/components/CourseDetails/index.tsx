@@ -2,71 +2,74 @@
 import { useGlobal } from 'contexts/global'
 import * as S from './styles'
 import Task from 'components/Task'
+import fetcher from 'utils/fetcher'
+import { useEffect, useState } from 'react'
+
+export interface Response {
+  data: Class
+  error: any
+}
+
+export interface Class {
+  course_name: string
+  course_description: string
+  workload: number
+  start_date: string
+  end_date: string
+  total_enrollments: number
+  photo: string
+  couse_category: string
+  tasks: TypeTask[]
+}
+
+export interface TypeTask {
+  id: number
+  type: 'globe' | 'file' | 'beaker'
+  title: string
+  description: string
+  external_link: string
+  done: boolean
+}
 
 const CourseDetails = () => {
   const { setActiveCourse } = useGlobal()
+
+  const [classDetails, setClassDetails] = useState<Class>()
+
+  async function getCourseDetails() {
+    const response: Response = await fetcher('http://localhost:5050/classes/1')
+    setClassDetails(response.data)
+  }
+
+  useEffect(() => {
+    getCourseDetails()
+  }, [])
+
   return (
     <S.Container>
       <S.GoBack onClick={() => setActiveCourse(undefined)}>Voltar</S.GoBack>
       <S.ImageWrapper>
         <S.CoursePhoto
-          src="https://source.unsplash.com/user/willianjusten/"
+          src={classDetails?.photo || ''}
           alt="Course photo"
           fill
         />
       </S.ImageWrapper>
 
-      <S.Title>A complete guide to using IndexedDB</S.Title>
-      <S.Text>
-        Data storage is an important part of most web applications, from
-        tracking user data to application data. With the rapid development of
-        faster and more robust web applications, efficient client storage is
-        needed to aid development. Client-side storage on the web has evolved a
-        lot over the years, from cookies used to store user data to the advent
-        of WebSQL (currently deprecated), which allowed developers to store data
-        in a SQL database in the browser, and in turn allowing users familiar
-        with SQL to build robust applications easily.
-      </S.Text>
+      <S.Title>{classDetails?.course_name}</S.Title>
+      <S.Text>{classDetails?.course_description}</S.Text>
 
       <S.Row>
         <S.H3>Conteúdo do curso</S.H3>
-        <S.Counter>23 Tarefas • 12 horas</S.Counter>
+        <S.Counter>
+          {classDetails?.tasks.length} • {classDetails?.workload} horas
+        </S.Counter>
       </S.Row>
 
       <S.TasksList>
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
-        <Task type="globe" />
-        <Task type="file" />
-        <Task type="beaker" />
+        {classDetails?.tasks.map((task) => (
+          <Task key={task.id} {...task} />
+        ))}
       </S.TasksList>
     </S.Container>
   )
