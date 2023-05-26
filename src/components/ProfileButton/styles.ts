@@ -1,8 +1,9 @@
 'use client'
+import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;

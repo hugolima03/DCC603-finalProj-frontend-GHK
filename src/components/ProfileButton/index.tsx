@@ -10,7 +10,7 @@ const ProfileButton = () => {
   if (data ===null) return null
 
   return (
-    <S.Container>
+    <S.Container href="/profile">
       {data?.user.photo ? (
         <S.Profile
           alt="Profile icon"
