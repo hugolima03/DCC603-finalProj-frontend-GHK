@@ -6,12 +6,23 @@ export const Container = styled.div`
   flex-direction: column;
   border-left: 0.1rem solid #EBEBF0;
 
+  overflow: auto;
+
   padding: 2.4rem;
   gap: 1.6rem;
  `
 
+export const GoBack = styled.button`
+  width: fit-content;
+  border: none;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+`
+
 export const ImageWrapper = styled.div`
-  height: 40rem;
+  min-height: 40rem;
   position: relative;
 `
 
@@ -28,6 +39,7 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
   font-size: 1.6rem;
+  line-height: normal;
 
   text-align: justify;
   text-indent: 5rem;

@@ -7,6 +7,7 @@ export interface ClassResponse {
 }
 
 export interface Class {
+  id: string
   slug: string
   course_name: string
   course_photo: string

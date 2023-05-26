@@ -4,10 +4,11 @@ import styled, { css } from 'styled-components'
 
 type ContainerProps = {
   small: boolean
+  active: boolean
 }
 
 export const Container = styled.button<ContainerProps>`
-  ${({ small }) => css`
+  ${({ small, active }) => css`
     display: flex;
     flex-direction: row;
 
@@ -16,6 +17,7 @@ export const Container = styled.button<ContainerProps>`
     text-decoration: none;
     cursor: pointer;
     padding: 0;
+    transition: all 0.2s;
 
     ${small
       ? css`
@@ -46,6 +48,14 @@ export const Container = styled.button<ContainerProps>`
         transform: scale(1.2);
       }
     }
+
+    ${active
+      ? css`
+          border-radius: 0.8rem;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        `
+      : null}
   `}
 `
 
@@ -64,6 +74,7 @@ export const Content = styled.div`
 `
 
 export const CouseImageContainer = styled.div`
+  display: flex;
   overflow: hidden;
 `
 

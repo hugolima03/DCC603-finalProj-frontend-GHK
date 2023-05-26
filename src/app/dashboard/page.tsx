@@ -20,7 +20,7 @@ const Page = () => {
       <S.Title>Cursos</S.Title>
 
       {classes?.map((item) => (
-        <CourseButton key={item.slug} small={!!activeCourse} {...item} />
+        <CourseButton key={item.slug} small={!!activeCourse} active={activeCourse === item.id} {...item} />
       ))}
     </S.Container>
   )

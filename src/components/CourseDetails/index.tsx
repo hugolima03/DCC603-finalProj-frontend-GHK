@@ -7,7 +7,7 @@ const CourseDetails = () => {
   const { setActiveCourse } = useGlobal()
   return (
     <S.Container>
-      <button onClick={() => setActiveCourse(undefined)}>Close</button>
+      <S.GoBack onClick={() => setActiveCourse(undefined)}>Voltar</S.GoBack>
       <S.ImageWrapper>
         <S.CoursePhoto
           src="https://source.unsplash.com/user/willianjusten/"
@@ -34,6 +34,36 @@ const CourseDetails = () => {
       </S.Row>
 
       <S.TasksList>
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
+        <Task type="globe" />
+        <Task type="file" />
+        <Task type="beaker" />
         <Task type="globe" />
         <Task type="file" />
         <Task type="beaker" />
